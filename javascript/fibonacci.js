@@ -1,5 +1,20 @@
+ //create a loop that itterates over an array as many times as the num
+  //then if length is longer than 1 make the second number a 1
+  //then starting a the 3rd index add the previous two numbers
+
 function fibonacci(num) {
-  // type your code here
+  const fibonacci = []
+
+  for(let i = 0; i < num+1; i++){
+      fibonacci.push(0+i)
+  }
+    
+  if (fibonacci.length > 2){
+   for(let i = 2; i < fibonacci.length; i++){
+      fibonacci[i] = (fibonacci[i-1] + fibonacci[i-2])
+    }
+  }
+  return fibonacci[num]
 }
 
 if (require.main === module) {
